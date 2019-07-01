@@ -1,0 +1,216 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml:2:1-40:12
+INJECTED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml:2:1-40:12
+INJECTED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml:2:1-40:12
+INJECTED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml:2:1-40:12
+MERGED from [com.codepath.libraries:android-oauth-handler:1.4.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/fbbc554418fdc67f080dddd4739c9bc3/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/81af8845b1615e664b1f6158ce36d708/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.persistence.room:runtime:1.1.1] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/0faca2c73334e7c6746285d504dabe89/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/56c5331c0d56b24a4a3932756f8aa129/AndroidManifest.xml:2:1-11:12
+MERGED from [com.facebook.stetho:stetho:1.5.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/919c2deb1538abdd25caa2bad9f2a039/AndroidManifest.xml:2:1-13:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/00a2b75f01d0ad1923a5ee0f035736d7/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-v4:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/dacec18a800e36dc321077a254c5d718/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/6a6b4f823a5329e352c2d70aa8076d01/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/25afaf3d75692bfb4c7f63bb4af356ac/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/3c0260fe00dfab5612e8a15c33417c5e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/e2a8dc33f0784b0c6392b77409f05cb6/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/ec6c00a63711c8cf97d9b6ec1b450945/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/f8cf76a21490459b54a7cf3036c6c47a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/3483c516171ffbc5adb2caba7204f510/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/50d82b176c4c519995248703b7cad2b3/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/3340a6929d3f609bd1ea41d73de1e62b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/1d63ea992d1737697f52a699991af37c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/87ab14d7c8be1db136f726766d9c9e87/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/faa49a4ff944405915ae6fb4e0fed7d5/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/da396037ec5f53400cada5fdf82746e8/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/b20d3eae3cdfdf6647ce6d8cb21910b4/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/db01736977bffe8bc1722d6a0fd61a45/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/f7cf0fc922579fb21012e5d100753b17/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/4cfe52525541503d63c8301896b58053/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.persistence:db-framework:1.1.1] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/e793d83822e7eae1c090cff3aa1e4962/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.persistence:db:1.1.1] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/2b56040183b3919ac3c86f89f597b51f/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/52b87cfd5b2d4af7af2bc538e73b66f5/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/f9447dd627b0b9a63b8f2b08c16b1c4d/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/073918d787c953c067225be4563e585e/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/dfe08a71040073f059f7258652fb379b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/ff930224205f3742e4695f311aac7af9/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/de522ca8ceb0fc2ffc05b291c67ff506/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/2beaea8f4b1b29e0119dae9558927e76/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/8903c4f495626359afd6c0b68d510a6c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/ed325a94777d40c53c3d1172d2a3ed34/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml:2:1-40:12
+INJECTED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml:2:1-40:12
+INJECTED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml:2:1-40:12
+	package
+		ADDED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml:3:5-51
+		INJECTED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml
+	android:versionName
+		ADDED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml:5:5-30
+		INJECTED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml:4:5-28
+		INJECTED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml:7:5-67
+	android:name
+		ADDED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml:7:22-64
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml:8:5-81
+	android:name
+		ADDED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml:8:22-78
+application
+ADDED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml:10:5-38:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/56c5331c0d56b24a4a3932756f8aa129/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/56c5331c0d56b24a4a3932756f8aa129/AndroidManifest.xml:9:5-20
+MERGED from [com.facebook.stetho:stetho:1.5.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/919c2deb1538abdd25caa2bad9f2a039/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.stetho:stetho:1.5.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/919c2deb1538abdd25caa2bad9f2a039/AndroidManifest.xml:11:5-20
+MERGED from [com.android.support:support-compat:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/db01736977bffe8bc1722d6a0fd61a45/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/db01736977bffe8bc1722d6a0fd61a45/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/f7cf0fc922579fb21012e5d100753b17/AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/f7cf0fc922579fb21012e5d100753b17/AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/db01736977bffe8bc1722d6a0fd61a45/AndroidManifest.xml:22:18-91
+	android:label
+		ADDED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml:14:9-41
+	android:icon
+		ADDED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml:13:9-45
+	android:allowBackup
+		ADDED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml:12:9-35
+	android:theme
+		ADDED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml:15:9-40
+	android:usesCleartextTraffic
+		ADDED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml:16:9-44
+	android:name
+		ADDED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml:11:9-35
+activity#com.codepath.apps.restclienttemplate.TimeLineActivity
+ADDED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml:17:9-63
+	android:name
+		ADDED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml:17:19-51
+activity#com.codepath.apps.restclienttemplate.LoginActivity
+ADDED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml:18:9-37:20
+	android:label
+		ADDED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml:20:13-45
+	android:theme
+		ADDED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml:21:13-44
+	android:name
+		ADDED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml:19:13-42
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml:22:13-26:29
+action#android.intent.action.MAIN
+ADDED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml:23:17-69
+	android:name
+		ADDED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml:23:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml:25:17-77
+	android:name
+		ADDED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml:25:27-74
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:@string/intent_host+data:scheme:@string/intent_scheme
+ADDED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml:27:13-36:29
+action#android.intent.action.VIEW
+ADDED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml:28:17-69
+	android:name
+		ADDED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml:28:25-66
+category#android.intent.category.DEFAULT
+ADDED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml:30:17-76
+	android:name
+		ADDED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml:30:27-73
+category#android.intent.category.BROWSABLE
+ADDED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml:31:17-78
+	android:name
+		ADDED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml:31:27-75
+data
+ADDED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml:33:17-35:62
+	android:host
+		ADDED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml:34:21-55
+	android:scheme
+		ADDED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml:35:21-59
+uses-sdk
+INJECTED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml
+INJECTED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml
+MERGED from [com.codepath.libraries:android-oauth-handler:1.4.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/fbbc554418fdc67f080dddd4739c9bc3/AndroidManifest.xml:7:5-9:41
+MERGED from [com.codepath.libraries:android-oauth-handler:1.4.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/fbbc554418fdc67f080dddd4739c9bc3/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/81af8845b1615e664b1f6158ce36d708/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/81af8845b1615e664b1f6158ce36d708/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence.room:runtime:1.1.1] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/0faca2c73334e7c6746285d504dabe89/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence.room:runtime:1.1.1] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/0faca2c73334e7c6746285d504dabe89/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/56c5331c0d56b24a4a3932756f8aa129/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/56c5331c0d56b24a4a3932756f8aa129/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.stetho:stetho:1.5.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/919c2deb1538abdd25caa2bad9f2a039/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.stetho:stetho:1.5.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/919c2deb1538abdd25caa2bad9f2a039/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/00a2b75f01d0ad1923a5ee0f035736d7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/00a2b75f01d0ad1923a5ee0f035736d7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/dacec18a800e36dc321077a254c5d718/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/dacec18a800e36dc321077a254c5d718/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/6a6b4f823a5329e352c2d70aa8076d01/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/6a6b4f823a5329e352c2d70aa8076d01/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/25afaf3d75692bfb4c7f63bb4af356ac/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/25afaf3d75692bfb4c7f63bb4af356ac/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/3c0260fe00dfab5612e8a15c33417c5e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/3c0260fe00dfab5612e8a15c33417c5e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/e2a8dc33f0784b0c6392b77409f05cb6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/e2a8dc33f0784b0c6392b77409f05cb6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/ec6c00a63711c8cf97d9b6ec1b450945/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/ec6c00a63711c8cf97d9b6ec1b450945/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/f8cf76a21490459b54a7cf3036c6c47a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/f8cf76a21490459b54a7cf3036c6c47a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/3483c516171ffbc5adb2caba7204f510/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/3483c516171ffbc5adb2caba7204f510/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/50d82b176c4c519995248703b7cad2b3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/50d82b176c4c519995248703b7cad2b3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/3340a6929d3f609bd1ea41d73de1e62b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/3340a6929d3f609bd1ea41d73de1e62b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/1d63ea992d1737697f52a699991af37c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/1d63ea992d1737697f52a699991af37c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/87ab14d7c8be1db136f726766d9c9e87/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/87ab14d7c8be1db136f726766d9c9e87/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/faa49a4ff944405915ae6fb4e0fed7d5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/faa49a4ff944405915ae6fb4e0fed7d5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/da396037ec5f53400cada5fdf82746e8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/da396037ec5f53400cada5fdf82746e8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/b20d3eae3cdfdf6647ce6d8cb21910b4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/b20d3eae3cdfdf6647ce6d8cb21910b4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/db01736977bffe8bc1722d6a0fd61a45/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/db01736977bffe8bc1722d6a0fd61a45/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/f7cf0fc922579fb21012e5d100753b17/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/f7cf0fc922579fb21012e5d100753b17/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/4cfe52525541503d63c8301896b58053/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/4cfe52525541503d63c8301896b58053/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence:db-framework:1.1.1] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/e793d83822e7eae1c090cff3aa1e4962/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence:db-framework:1.1.1] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/e793d83822e7eae1c090cff3aa1e4962/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence:db:1.1.1] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/2b56040183b3919ac3c86f89f597b51f/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence:db:1.1.1] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/2b56040183b3919ac3c86f89f597b51f/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/52b87cfd5b2d4af7af2bc538e73b66f5/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/52b87cfd5b2d4af7af2bc538e73b66f5/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/f9447dd627b0b9a63b8f2b08c16b1c4d/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/f9447dd627b0b9a63b8f2b08c16b1c4d/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/073918d787c953c067225be4563e585e/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/073918d787c953c067225be4563e585e/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/dfe08a71040073f059f7258652fb379b/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/dfe08a71040073f059f7258652fb379b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/ff930224205f3742e4695f311aac7af9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/ff930224205f3742e4695f311aac7af9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/de522ca8ceb0fc2ffc05b291c67ff506/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/de522ca8ceb0fc2ffc05b291c67ff506/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/2beaea8f4b1b29e0119dae9558927e76/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/2beaea8f4b1b29e0119dae9558927e76/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/8903c4f495626359afd6c0b68d510a6c/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/8903c4f495626359afd6c0b68d510a6c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/ed325a94777d40c53c3d1172d2a3ed34/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/ed325a94777d40c53c3d1172d2a3ed34/AndroidManifest.xml:20:5-44
+INJECTED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml
+INJECTED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml
+		ADDED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml
+		ADDED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/AndroidManifest.xml
