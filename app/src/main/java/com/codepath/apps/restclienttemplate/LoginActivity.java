@@ -3,6 +3,7 @@ package com.codepath.apps.restclienttemplate;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 
@@ -39,14 +40,15 @@ public class LoginActivity extends OAuthLoginActionBarActivity<TwitterClient> {
 		getMenuInflater().inflate(R.menu.login, menu);
 		return true;
 	}
-
 	// OAuth authenticated successfully, launch primary authenticated activity
 	// i.e Display application "homepage"
 	@Override
 	public void onLoginSuccess() {
 		//Toast.makeText(this,"You log in!", Toast.LENGTH_LONG).show();
 		Intent i = new Intent(this, TimeLineActivity.class);
+		Log.d("LogInActivity", "making intent");
 		startActivity(i);
+
 	}
 
 	// OAuth authentication flow failed, handle the error

@@ -572,6 +572,10 @@
         "source": "/Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/f8cf76a21490459b54a7cf3036c6c47a/res/layout/notification_template_lines_media.xml"
     },
     {
+        "merged": "/Users/alexgz9851/Documents/android/projects/TwitterApp/app/build/intermediates/res/merged/debug/layout_item_twitter.xml.flat",
+        "source": "/Users/alexgz9851/Documents/android/projects/TwitterApp/app/src/main/res/layout/item_twitter.xml"
+    },
+    {
         "merged": "/Users/alexgz9851/Documents/android/projects/TwitterApp/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",
         "source": "/Users/alexgz9851/.gradle/caches/transforms-2/files-2.1/81af8845b1615e664b1f6158ce36d708/res/drawable-xxxhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png"
     },
