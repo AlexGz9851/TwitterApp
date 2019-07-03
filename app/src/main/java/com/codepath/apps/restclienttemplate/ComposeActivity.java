@@ -32,7 +32,7 @@ public class ComposeActivity extends AppCompatActivity implements View.OnClickLi
     @Override
     public void onClick(View v){
 
-        client.postTweet(message.toString(), new JsonHttpResponseHandler(){
+        client.postTweet(message.getText().toString(), new JsonHttpResponseHandler(){
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 Log.d("ComposeActivity", "onSuccess(int, Header[], JSONObject) was not overriden, but callback was received");
                 try {

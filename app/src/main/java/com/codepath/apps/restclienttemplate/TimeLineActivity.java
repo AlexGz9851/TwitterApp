@@ -113,10 +113,12 @@ public class TimeLineActivity extends AppCompatActivity  {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         // Get results from child activity
-        if (resultCode == RESULT_OK && requestCode == REQUEST_CODE) {
-            Tweet resultTweet = Parcels.unwrap(getIntent().getParcelableExtra("tweetWritten"));
+        if (resultCode == RESULT_OK && requestCode == REQUEST_CODE ) {
+            Intent i = getIntent();
+            Tweet resultTweet =(Tweet) Parcels.unwrap(i.getParcelableExtra("tweetWritten"));
             // basically we're showing the tweet which just write. don't come from API, is what user just write.
             // the post was done, but also we want show the tweet right now.
+            // TODO the result tweet is posted, but i dont recieve it from parceler here. resultTweet == null.
             tweets.add(resultTweet);
             tweetAdapter.notifyItemInserted(tweets.size()-1);
 
