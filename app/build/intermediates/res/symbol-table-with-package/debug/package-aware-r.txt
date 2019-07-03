@@ -648,6 +648,7 @@ drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable ic_launcher
+drawable make_a_tweet
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -745,8 +746,10 @@ id line1
 id line3
 id listMode
 id list_item
+id make_a_tweet
 id media_actions
 id message
+id messageTweet
 id middle
 id multiply
 id never
@@ -759,6 +762,7 @@ id packed
 id parent
 id parentPanel
 id percent
+id postTweet
 id progress_circular
 id progress_horizontal
 id radio
@@ -852,6 +856,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_compose
 layout activity_login
 layout activity_time_line
 layout item_twitter
@@ -875,6 +880,7 @@ layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
 menu login
+menu time_line
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description

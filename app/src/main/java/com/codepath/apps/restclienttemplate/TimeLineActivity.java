@@ -1,28 +1,45 @@
 package com.codepath.apps.restclienttemplate;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import com.codepath.apps.restclienttemplate.models.Tweet;
 import com.loopj.android.http.JsonHttpResponseHandler;
 
 import org.json.JSONArray;
 import org.json.JSONException;
+import org.parceler.Parcels;
 
 import java.util.ArrayList;
 
 import cz.msebera.android.httpclient.Header;
 
-public class TimeLineActivity extends AppCompatActivity {
+public class TimeLineActivity extends AppCompatActivity  {
+    // REQUEST_CODE can be any value we like, used to determine the result type later
+    private final int REQUEST_CODE = 20;
 
     TweetAdapter tweetAdapter;
+
+    public TwitterClient getClient() {
+        return client;
+    }
+
     TwitterClient client;
     ArrayList<Tweet> tweets ;
     RecyclerView rvTweets;
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.time_line, menu);
+        return true;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,5 +94,32 @@ public class TimeLineActivity extends AppCompatActivity {
                 Log.e("TimeLineActivity","Couldn't load tweets");
             }
         });
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.make_a_tweet: {
+                Intent i = new Intent(this, ComposeActivity.class );
+
+                startActivityForResult(i, REQUEST_CODE);
+                return true;
+            }
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        // Get results from child activity
+        if (resultCode == RESULT_OK && requestCode == REQUEST_CODE) {
+            Tweet resultTweet = Parcels.unwrap(getIntent().getParcelableExtra("tweetWritten"));
+            // basically we're showing the tweet which just write. don't come from API, is what user just write.
+            // the post was done, but also we want show the tweet right now.
+            tweets.add(resultTweet);
+            tweetAdapter.notifyItemInserted(tweets.size()-1);
+
+        }
     }
 }

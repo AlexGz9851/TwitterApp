@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/make_a_tweet"
+        android:icon="@drawable/make_a_tweet"
+        app:showAsAction="ifRoom"
+        android:title="Compose">
+    </item>
+</menu>
