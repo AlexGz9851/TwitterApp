@@ -7,8 +7,8 @@
 
     <ImageView
         android:id="@+id/ivProfileImage"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -22,7 +22,7 @@
 
     <TextView
         android:id="@+id/tvUsername"
-        android:layout_width="303dp"
+        android:layout_width="300dp"
         android:layout_height="25dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -38,11 +38,14 @@
 
     <TextView
         android:id="@+id/tvBody"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="74dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="TextView"
+        android:autoLink="all"
+        android:linksClickable="true"
+        android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -58,6 +61,7 @@
         android:layout_marginBottom="8dp"
         android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@android:color/background_light"
         android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/tvBody"
