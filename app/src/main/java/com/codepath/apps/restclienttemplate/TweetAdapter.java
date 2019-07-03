@@ -14,6 +14,9 @@ import com.codepath.apps.restclienttemplate.models.Tweet;
 
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class TweetAdapter  extends RecyclerView.Adapter<TweetAdapter.ViewHolder>{
     private List<Tweet> tweets;
     Context context;
@@ -72,19 +75,14 @@ public class TweetAdapter  extends RecyclerView.Adapter<TweetAdapter.ViewHolder>
 
     // create ViewHolder class
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView tvUsername ;
-        public TextView tvBody;
-        public TextView tvRelativeTime;
-        public ImageView ivProfileImage ;
+        public @BindView(R.id.tvUsername) TextView tvUsername ;
+        public @BindView(R.id.tvBody) TextView tvBody;
+        public @BindView(R.id.tvRelativeTime) TextView tvRelativeTime;
+        public @BindView(R.id.ivProfileImage) ImageView ivProfileImage ;
 
         public ViewHolder(View itemView){
             super(itemView);
-
-            ivProfileImage = (ImageView)itemView.findViewById(R.id.ivProfileImage);
-            tvBody = (TextView)itemView.findViewById(R.id.tvBody);
-            tvUsername =(TextView) itemView.findViewById(R.id.tvUsername);
-            tvRelativeTime = (TextView) itemView.findViewById(R.id.tvRelativeTime);
-
+            ButterKnife.bind(this, itemView);
         }
     }
 }

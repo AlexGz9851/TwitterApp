@@ -18,28 +18,28 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.parceler.Parcels;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import cz.msebera.android.httpclient.Header;
 
 public class ComposeActivity extends AppCompatActivity implements View.OnClickListener {
 
     public static final int TWITTER_LENGHT=280;// tw characterers lenght
     TwitterClient client;
-    EditText message;
-    TextView counter;
-    Button postTweetBtn;
+    @BindView(R.id.messageTweet) EditText message;
+    @BindView (R.id.tvCounter) TextView counter;
+    @BindView (R.id.postTweet) Button postTweetBtn;
     int count;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        count=280;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_compose);
-        client = new TwitterClient(this);
-        counter=findViewById(R.id.tvCounter);
-        postTweetBtn = findViewById(R.id.postTweet);
+        ButterKnife.bind(this);
 
+        count=280;
+        client = new TwitterClient(this);
         counter.setText(String.format("%d",count));
-        message = (EditText) findViewById(R.id.messageTweet);
         message.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
