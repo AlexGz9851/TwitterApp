@@ -2,6 +2,7 @@ package com.codepath.apps.restclienttemplate.models;
 
 import android.text.format.DateUtils;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.parceler.Parcel;
@@ -12,15 +13,19 @@ import java.util.Locale;
 
 @Parcel
 public class Tweet {
-    public String body;
-    public long uid; // database tweet id
-    public String createdDate;
-    public User user;
-    public String relativeTime; // Time ago tweet was posted.
+    private String body;
+    private int retweets;
+    private int likes;
+    private long uid; // database tweet id
+    private String createdDate;
+    private User user;
+    private String relativeTime; // Time ago tweet was posted.
+
+    public Entity entity;
+    public boolean hasEntities;
 
     // key: created_at
-    public Tweet() {
-    }
+    public Tweet() {}
 
     // deserialize JSON
     public static Tweet fromJSON(JSONObject json) throws JSONException {
@@ -32,6 +37,21 @@ public class Tweet {
         tweet.createdDate = json.getString("created_at");
         tweet.user = User.fromJSON(json.getJSONObject("user"));
         tweet.relativeTime = getRelativeTimeAgo(json.getString("created_at"));
+        tweet.likes = json.getInt("favorite_count");
+        tweet.retweets = json.getInt("retweet_count");
+
+        JSONObject ent = json.getJSONObject("entities");
+        if(ent.has("media")){
+            JSONArray mediaEndpoint = ent.getJSONArray("media");
+            if(mediaEndpoint!=null && mediaEndpoint.length()!=0){
+                tweet.entity = Entity.fromJSON(json.getJSONObject("entities"));
+                tweet.hasEntities = true;
+
+            }else{
+                tweet.hasEntities = false;
+            }
+        }
+        //tweet.entity = Entity.fromJSON(json);
 
         return tweet;
 
@@ -54,5 +74,61 @@ public class Tweet {
 
         return relativeDate;
 
+    }
+
+    public String getBody() {
+        return body;
+    }
+
+    public void setBody(String body) {
+        this.body = body;
+    }
+
+    public int getRetweets() {
+        return retweets;
+    }
+
+    public void setRetweets(int retweets) {
+        this.retweets = retweets;
+    }
+
+    public int getLikes() {
+        return likes;
+    }
+
+    public void setLikes(int likes) {
+        this.likes = likes;
+    }
+
+    public long getUid() {
+        return uid;
+    }
+
+    public void setUid(long uid) {
+        this.uid = uid;
+    }
+
+    public String getCreatedDate() {
+        return createdDate;
+    }
+
+    public void setCreatedDate(String createdDate) {
+        this.createdDate = createdDate;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public String getRelativeTime() {
+        return relativeTime;
+    }
+
+    public void setRelativeTime(String relativeTime) {
+        this.relativeTime = relativeTime;
     }
 }

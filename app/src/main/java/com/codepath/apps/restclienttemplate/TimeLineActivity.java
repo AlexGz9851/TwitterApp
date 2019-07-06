@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ProgressBar;
 
 import com.codepath.apps.restclienttemplate.models.Tweet;
@@ -35,6 +36,9 @@ public class TimeLineActivity extends AppCompatActivity  {
     ArrayList<Tweet> tweets ;
     RecyclerView rvTweets;
     MenuItem miActionProgressItem;
+    LinearLayoutManager linearLayoutManager;
+    private EndlessRecyclerViewScrollListener scrollListener;
+    long maxId=0;
 
 
     public TwitterClient getClient() {
@@ -71,21 +75,33 @@ public class TimeLineActivity extends AppCompatActivity  {
                 android.R.color.holo_green_light,
                 android.R.color.holo_orange_light,
                 android.R.color.holo_red_light);
-
+        linearLayoutManager = new LinearLayoutManager(this);
+        scrollListener = new EndlessRecyclerViewScrollListener(linearLayoutManager) {
+            @Override
+            public void onLoadMore(int page, int totalItemsCount, RecyclerView view) {
+                // Triggered only when new data needs to be appended to the list
+                // Add whatever code is needed to append new items to the bottom of the list
+                loadNextDataFromApi(page);
+            }
+        };
+        //find the recycler view
+        rvTweets = (RecyclerView) findViewById(R.id.rvTweet);
+        // Adds the scroll listener to RecyclerView
+        rvTweets.addOnScrollListener(scrollListener);
 
         client = TwitterApp.getRestClient(this);
         Log.d("TimeLineActivity", "client created"+client.toString());
-        //find the recycler view
-        rvTweets = (RecyclerView) findViewById(R.id.rvTweet);
+
+
         // init the array list (data source)
         tweets = new ArrayList<Tweet>();
         // construct the adapter from this datasource
         tweetAdapter= new TweetAdapter(tweets);
         // recyclerView setup ( layout manager, use adapter)
-        rvTweets.setLayoutManager(new LinearLayoutManager(this));
+
+        rvTweets.setLayoutManager(linearLayoutManager);
         // set the adapter
         rvTweets.setAdapter(tweetAdapter);
-        populateTimeline();
 
     }
 
@@ -94,45 +110,59 @@ public class TimeLineActivity extends AppCompatActivity  {
         // Send the network request to fetch the updated data
         // `client` here is an instance of Android Async HTTP
         // getHomeTimeline is an example endpoint.
-        client.getHomeTimeline(1,new JsonHttpResponseHandler() {
+        client.getHomeTimeline(maxId,new JsonHttpResponseHandler() {
 
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
+                super.onSuccess(statusCode, headers, response);
                 // Remember to CLEAR OUT old items before appending in the new ones
                 tweetAdapter.clear();
                 // ...the data has come back, add new items to your adapter...
-                parseTweetsfromJSONArray(response);
+                parseTweetsFromJSONArray(response);
+                tweetAdapter.addAll(tweets);
                 // Now we call setRefreshing(false) to signal refresh has finished
                 swipeContainer.setRefreshing(false);
+                hideProgressBar();
             }
-
 
             @Override
             public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
+                super.onFailure(statusCode, headers, responseString, throwable);
                 Log.d("DEBUG", "Fetch timeline error: " + throwable.toString());
+                hideProgressBar();
 
             }
         });
-        hideProgressBar();
+
     }
 
 
-    private  void populateTimeline(){
-        client.getHomeTimeline(1, new JsonHttpResponseHandler() {
+    public void loadNextDataFromApi(int offset) {
+        maxId = tweets.get(tweets.size()-1).getUid();
+        populateTimeline(maxId);
+    }
+
+    private  void populateTimeline(long maxId){
+        showProgressBar();
+        client.getHomeTimeline(maxId , new JsonHttpResponseHandler() {
 
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
-                parseTweetsfromJSONArray(response);
+                parseTweetsFromJSONArray(response);
+                hideProgressBar();
             }
 
             @Override
             public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
                 Log.e("TimeLineActivity","Couldn't load tweets");
+                hideProgressBar();
             }
+
         });
+
     }
 
-    public void parseTweetsfromJSONArray(JSONArray response){
+    public void parseTweetsFromJSONArray(JSONArray response){
         //
         Log.d("TimeLineActivity", "Succeded");
         // iterate through the JSON array
@@ -155,18 +185,27 @@ public class TimeLineActivity extends AppCompatActivity  {
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
+            /*switch (item.getItemId()) {
             case R.id.make_a_tweet: {
-                Intent i = new Intent(this, ComposeActivity.class );
 
-                startActivityForResult(i, REQUEST_CODE);
-                return true;
             }
             default:
                 return super.onOptionsItemSelected(item);
-        }
+        }*/
+            return false;
     }
 
+    public void onClick(View v){
+        Intent i = new Intent(this, ComposeActivity.class );
+        i.putExtra("action_name", "tweet");
+        startActivityForResult(i, REQUEST_CODE);
+
+
+
+    }
+    public void onClickTwBar(View v){
+        //TODO ITEMS LOGOS.
+    }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         // Get results from child activity
@@ -184,8 +223,10 @@ public class TimeLineActivity extends AppCompatActivity  {
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
+
         // Store instance of the menu item containing progress
         miActionProgressItem = menu.findItem(R.id.miActionProgress);
+        populateTimeline(maxId);
         // Extract the action-view from the menu item
         ProgressBar v =  (ProgressBar) MenuItemCompat.getActionView(miActionProgressItem);
         // Return to finish
@@ -201,4 +242,6 @@ public class TimeLineActivity extends AppCompatActivity  {
         // Hide progress item
         miActionProgressItem.setVisible(false);
     }
+
+
 }

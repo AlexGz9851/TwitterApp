@@ -21,16 +21,16 @@ import com.loopj.android.http.RequestParams;
  * 
  */
 public class TwitterClient extends OAuthBaseClient {
+
 	public static final BaseApi REST_API_INSTANCE = TwitterApi.instance(); // API which we're gonna call. Twitter :)
 	public static final String REST_URL = "https://api.twitter.com/1.1";; // API url
 	public static final String REST_CONSUMER_KEY = "4KxocRp2Wh8RZ9cy1KJEjxGVy";       // keys.
 	public static final String REST_CONSUMER_SECRET = "EeyJ4vEZN3al7c0C13bMwAY3pGc2RASrampYtvJvnX1kLDHKJf";
-
 	// Landing page to indicate the OAuth flow worked in case Chrome for Android 25+ blocks navigation back to the app.
 	public static final String FALLBACK_URL = "https://codepath.github.io/android-rest-client-template/success.html";
-
 	// See https://developer.chrome.com/multidevice/android/intents
 	public static final String REST_CALLBACK_URL_TEMPLATE = "intent://%s#Intent;action=android.intent.action.VIEW;scheme=%s;package=%s;S.browser_fallback_url=%s;end";
+
 
 	public TwitterClient(Context context) {
 		super(context, REST_API_INSTANCE,
@@ -42,10 +42,12 @@ public class TwitterClient extends OAuthBaseClient {
 	}
 	// CHANGE THIS
 	// DEFINE METHODS for different API endpoints here
-	public void getHomeTimeline(int page, AsyncHttpResponseHandler handler) {
+	public void getHomeTimeline(long maxId, AsyncHttpResponseHandler handler) {
 		String apiUrl = getApiUrl("statuses/home_timeline.json");
 		RequestParams params = new RequestParams();
-		params.put("page", String.valueOf(page));
+		if(maxId!=0){
+			params.put("max_id", maxId);
+		}
 		getClient().get(apiUrl, params, handler);
 	}
 
@@ -57,12 +59,14 @@ public class TwitterClient extends OAuthBaseClient {
 		params.put("status", message);
 		client.post(apiUrl, params, handler);
 	}
-	/* 1. Define the endpoint URL with getApiUrl and pass a relative path to the endpoint
-	 * 	  i.e getApiUrl("statuses/home_timeline.json");
-	 * 2. Define the parameters to pass to the request (query or body)
-	 *    i.e RequestParams params = new RequestParams("foo", "bar");
-	 * 3. Define the request method and make a call to the client
-	 *    i.e client.get(apiUrl, params, handler);
-	 *    i.e client.post(apiUrl, params, handler);
-	 */
+	public void retweet(int idTweet, String message, AsyncHttpResponseHandler handler){
+		String apiUrl = getApiUrl("statuses/retweet/"+idTweet+".json");
+		RequestParams params = new RequestParams();
+		params.put("id", idTweet);
+		client.post(apiUrl, params, handler);
+	}
+
+	public void comment(){
+
+	}
 }

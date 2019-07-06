@@ -18,28 +18,33 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.parceler.Parcels;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import cz.msebera.android.httpclient.Header;
 
 public class ComposeActivity extends AppCompatActivity implements View.OnClickListener {
 
-    public static final int TWITTER_LENGHT=280;// tw characterers lenght
+    public static final int TWEET_MAX_LENGHT=280;
     TwitterClient client;
-    @BindView(R.id.messageTweet) EditText message;
-    @BindView (R.id.tvCounter) TextView counter;
-    @BindView (R.id.postTweet) Button postTweetBtn;
+    EditText message;
+    TextView counter;
+    Button postTweetBtn;
     int count;
+    String actionName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_compose);
-        ButterKnife.bind(this);
 
         count=280;
+        actionName = getIntent().getExtras().getString("action_name");
+
+        setContentView(R.layout.activity_compose);
         client = new TwitterClient(this);
+        counter=findViewById(R.id.tvCounter);
+        postTweetBtn = findViewById(R.id.post_tweet);
+
         counter.setText(String.format("%d",count));
+        message = (EditText) findViewById(R.id.messageTweet);
+
         message.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -53,9 +58,22 @@ public class ComposeActivity extends AppCompatActivity implements View.OnClickLi
 
             @Override
             public void afterTextChanged(Editable s) {
-                    count=TWITTER_LENGHT-message.getText().length();
+                    count=TWEET_MAX_LENGHT-message.getText().length();
                     counter.setText(String.format("%d",count));
-                    postTweetBtn.setEnabled(count>=0);// can't send large tweets tan the limit
+
+                    if(count>=0){// can't send large tweets tan the limit
+                        postTweetBtn.setEnabled(true);
+                        counter.setTextColor(getResources().getColor(R.color.medium_gray));
+                        postTweetBtn.setBackgroundColor(getResources().getColor(R.color.twitter_blue));
+                        postTweetBtn.setTextColor(getResources().getColor(R.color.white));
+                    }else{
+                        postTweetBtn.setEnabled(false);// can't send large tweets tan the limit
+                        counter.setTextColor(getResources().getColor(R.color.medium_red));// set counter in red if tweet is large.
+                        postTweetBtn.setBackgroundColor(getResources().getColor(R.color.light_gray));
+                        postTweetBtn.setTextColor(getResources().getColor(R.color.background_color));
+                    }
+
+
             }
         });
 
@@ -64,24 +82,42 @@ public class ComposeActivity extends AppCompatActivity implements View.OnClickLi
     @Override
     public void onClick(View v){
 
-        client.postTweet(message.getText().toString(), new JsonHttpResponseHandler(){
-            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-                Log.d("ComposeActivity", "onSuccess(int, Header[], JSONObject) was not overriden, but callback was received");
-                try {
-                    Tweet myTweet = Tweet.fromJSON(response);
-                    Intent i = new Intent();
-                    i.putExtra("tweet_post", Parcels.wrap(myTweet));
-                    setResult(RESULT_OK,i);
-                    finish();
+        switch (actionName){
+            case "tweet":
 
-                }catch (JSONException e){
-                    e.printStackTrace();
-                }
-            }
+                client.postTweet(message.getText().toString(), new JsonHttpResponseHandler(){
+                    public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
 
-            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
-                Log.d("ComposeActivity", "onFailure(int, Header[], Throwable, JSONObject) was not overriden, but callback was received", throwable);
-            }
-        });
+                        Log.d("ComposeActivity", "onSuccess(int, Header[], JSONObject) was not overriden, but callback was received");
+                        try {
+                            Tweet myTweet = Tweet.fromJSON(response);
+                            Intent i = new Intent();
+                            i.putExtra("tweet_post", Parcels.wrap(myTweet));
+                            setResult(RESULT_OK,i);
+                            finish();
+
+                        }catch (JSONException e){
+                            e.printStackTrace();
+                        }
+                    }
+
+                    public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
+                        Log.d("ComposeActivity", "onFailure(int, Header[], Throwable, JSONObject) was not overriden, but callback was received", throwable);
+                    }
+                });
+
+                break;
+
+
+            case "comment":
+                //TODO DIFFERENT ACTIONS, DIFFERENT JSON, DIFERENT URL.
+                client.comment();
+                break;
+            default:
+                //TODO DIFFERENT ACTIONS, DIFFERENT JSON, DIFERENT URL.
+                Intent i = new Intent();
+                break;
+        }
+
     }
 }

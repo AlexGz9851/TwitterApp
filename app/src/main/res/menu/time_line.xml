@@ -3,12 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     >
 
-    <item
-        android:id="@+id/make_a_tweet"
-        android:icon="@drawable/make_a_tweet"
-        app:showAsAction="ifRoom"
-        android:title="Compose">
-    </item>
 
     <item
         android:id="@+id/miActionProgress"
